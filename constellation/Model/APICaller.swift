@@ -9,9 +9,10 @@ import Foundation
 
 class APICaller {
     static let shared = APICaller()
+    
     func getInfo(lat: Double, lon: Double, MonthAndDay:String, hour: String, min: String, completion: @escaping (Result<[Results], Error>) -> Void) {
         let url = "https://livlog.xyz/hoshimiru/constellation?lat=\(lat)&lng=\(lon)&date=\(MonthAndDay)&hour=\(hour)&min=\(min)"
-        let urlString = URL(string: url)!
+        guard let urlString = URL(string: url) else {return}
         URLSession.shared.dataTask(with: urlString) { data, _, error in
             if let error = error {
                 completion(.failure(error))
