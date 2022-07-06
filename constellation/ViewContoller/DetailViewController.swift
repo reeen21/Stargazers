@@ -10,7 +10,7 @@ import CoreLocation
 import Nuke
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet var starImageView: UIImageView!
     @IBOutlet var starIconImageView: UIImageView!
     @IBOutlet var altitudeNumLabel: UILabel!
@@ -25,8 +25,8 @@ class DetailViewController: UIViewController {
     
     var results: Results!
     private var bigImageButton: UIBarButtonItem!
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
@@ -38,15 +38,17 @@ class DetailViewController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = .darkGray
     }
     @objc func DetailImage(_ sender: UIBarButtonItem) {
-        let result = results!
-        let detail = self.storyboard?.instantiateViewController(withIdentifier: "Big") as! BigImageView
+        guard let result = results else {return}
+        guard let detail = self.storyboard?.instantiateViewController(withIdentifier: "Big") as? BigImageView else {
+            fatalError()
+        }
         detail.starImageUrl = result.starImageURL
         detail.starIconUrl = result.starIconURL
         self.navigationController?.pushViewController(detail, animated: true)
     }
     
     func setData() {
-        let result = results!
+        guard let result = results else {return}
         altitudeNumLabel.text = "高度: \(result.altitudeNum)°"
         contentLabel.text = "概説: \(result.content)"
         directionNumLabel.text = "方角(°)\(result.directionNum)"

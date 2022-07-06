@@ -15,6 +15,7 @@ class BigImageView: UIViewController {
 
     var starImageUrl: URL? = nil
     var starIconUrl: URL? = nil
+    
     override func viewDidLoad() {
         view.backgroundColor = .black
         Nuke.loadImage(with: starImageUrl, into: starImage)

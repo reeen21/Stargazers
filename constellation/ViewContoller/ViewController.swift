@@ -58,11 +58,11 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        APICaller.shared.getInfo(lat: lat, lon: lon, MonthAndDay: MonthAndDay, hour: hour, min: min) { result in
+        APICaller.shared.getInfo(lat: lat, lon: lon, MonthAndDay: MonthAndDay, hour: hour, min: min) { [weak self] result in
             switch result {
             case .success(let articles):
-                self.result = articles
-                self.cellModel = articles.compactMap({
+                self?.result = articles
+                self?.cellModel = articles.compactMap({
                     CellViewModel(
                         jpName: $0.jpName,
                         enName: $0.enName,
@@ -70,7 +70,7 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
                         starIconURL: $0.starIconURL)
                 })
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    self?.tableView.reloadData()
                 }
             case .failure(let err):
                 print("検索時にerrorが発生しました:\(err)")
