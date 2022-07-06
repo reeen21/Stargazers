@@ -28,6 +28,8 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
         tableView.dataSource = self
         
         view.backgroundColor = .black
+        title = "Constellations"
+        
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         if (CLLocationManager.locationServicesEnabled()) {
@@ -51,7 +53,6 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
         APICaller.shared.getInfo(lat: lat, lon: lon, MonthAndDay: MonthAndDay, hour: hour, min: min) { result in
             switch result {
             case .success(let articles):
@@ -60,7 +61,8 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
                     CellViewModel(
                         jpName: $0.jpName,
                         enName: $0.enName,
-                        direction: $0.direction)
+                        direction: $0.direction,
+                        starIconURL: $0.starIconURL)
                 })
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -78,7 +80,7 @@ extension ViewControllor: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? constellationTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? constellationCell else {
             fatalError()
         }
         cell.configure(with: cellModel[indexPath.row])

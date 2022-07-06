@@ -38,14 +38,19 @@ class CellViewModel {
     let jpName: String
     let enName: String
     let direction: String
-    
+    let starIconURL: URL?
+    var imageData: Data? = nil
+
     init(
         jpName: String,
         enName: String,
-        direction: String
+        direction: String,
+        starIconURL: URL?
+       
     ) {
         self.jpName = jpName
         self.enName = enName
         self.direction = direction
+        self.starIconURL = starIconURL
     }
 }

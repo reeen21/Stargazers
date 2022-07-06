@@ -56,9 +56,13 @@ class DetailViewController: UIViewController {
         contentLabel.textColor = .white
         
         let starImageUrl = result.starImageURL
+        starImageView.layer.borderWidth = 0.3
+        starImageView.layer.borderColor = UIColor.darkGray.cgColor
         Nuke.loadImage(with: starImageUrl, into: starImageView)
         
         let starIconUrl = result.starIconURL
+        starIconImageView.layer.borderWidth = 0.3
+        starIconImageView.layer.borderColor = UIColor.darkGray.cgColor
         Nuke.loadImage(with: starIconUrl, into: starIconImageView)
     }
 }
