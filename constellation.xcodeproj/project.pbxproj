@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		06C3F8486BB4A152E498FD7B /* Pods_constellation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F63FD8AA7F2A1EE092287D7 /* Pods_constellation.framework */; };
+		4B69A0F72875B4E500BBDF17 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A0F62875B4E500BBDF17 /* APICaller.swift */; };
+		4B69A0FC2875B68F00BBDF17 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A0FB2875B68F00BBDF17 /* model.swift */; };
+		4B69A0FE2875BC1100BBDF17 /* constellationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A0FD2875BC1100BBDF17 /* constellationTableViewCell.swift */; };
 		4BA4FF112874584900A6F167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4FF102874584900A6F167 /* AppDelegate.swift */; };
 		4BA4FF132874584900A6F167 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4FF122874584900A6F167 /* SceneDelegate.swift */; };
 		4BA4FF152874584900A6F167 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4FF142874584900A6F167 /* DetailViewController.swift */; };
@@ -19,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		3F63FD8AA7F2A1EE092287D7 /* Pods_constellation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_constellation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B69A0F62875B4E500BBDF17 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		4B69A0FB2875B68F00BBDF17 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		4B69A0FD2875BC1100BBDF17 /* constellationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constellationTableViewCell.swift; sourceTree = "<group>"; };
 		4BA4FF0D2874584900A6F167 /* constellation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = constellation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA4FF102874584900A6F167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BA4FF122874584900A6F167 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +50,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B69A0F82875B65900BBDF17 /* ViewContoller */ = {
+			isa = PBXGroup;
+			children = (
+				4BC2ECD928758058005F3B0B /* ViewController.swift */,
+				4B69A0FD2875BC1100BBDF17 /* constellationTableViewCell.swift */,
+				4BA4FF142874584900A6F167 /* DetailViewController.swift */,
+			);
+			path = ViewContoller;
+			sourceTree = "<group>";
+		};
+		4B69A0F92875B66300BBDF17 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BA4FF162874584900A6F167 /* Main.storyboard */,
+				4BA4FF1B2874584A00A6F167 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B69A0FA2875B66800BBDF17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B69A0F62875B4E500BBDF17 /* APICaller.swift */,
+				4B69A0FB2875B68F00BBDF17 /* model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4BA4FF042874584900A6F167 = {
 			isa = PBXGroup;
 			children = (
@@ -65,13 +99,12 @@
 		4BA4FF0F2874584900A6F167 /* constellation */ = {
 			isa = PBXGroup;
 			children = (
+				4B69A0FA2875B66800BBDF17 /* Model */,
+				4B69A0F92875B66300BBDF17 /* View */,
+				4B69A0F82875B65900BBDF17 /* ViewContoller */,
 				4BA4FF102874584900A6F167 /* AppDelegate.swift */,
 				4BA4FF122874584900A6F167 /* SceneDelegate.swift */,
-				4BA4FF142874584900A6F167 /* DetailViewController.swift */,
-				4BC2ECD928758058005F3B0B /* ViewController.swift */,
-				4BA4FF162874584900A6F167 /* Main.storyboard */,
 				4BA4FF192874584A00A6F167 /* Assets.xcassets */,
-				4BA4FF1B2874584A00A6F167 /* LaunchScreen.storyboard */,
 				4BA4FF1E2874584A00A6F167 /* Info.plist */,
 			);
 			path = constellation;
@@ -210,8 +243,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BA4FF152874584900A6F167 /* DetailViewController.swift in Sources */,
+				4B69A0FC2875B68F00BBDF17 /* model.swift in Sources */,
+				4B69A0FE2875BC1100BBDF17 /* constellationTableViewCell.swift in Sources */,
 				4BA4FF112874584900A6F167 /* AppDelegate.swift in Sources */,
 				4BC2ECDA28758058005F3B0B /* ViewController.swift in Sources */,
+				4B69A0F72875B4E500BBDF17 /* APICaller.swift in Sources */,
 				4BA4FF132874584900A6F167 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
