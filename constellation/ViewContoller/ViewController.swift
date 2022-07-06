@@ -31,7 +31,9 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
         title = "Constellations"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.tintColor = UIColor.darkGray
-
+        navigationController?.navigationBar.barTintColor = .black
+        navigationItem.largeTitleDisplayMode = .always
+        
         
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -88,6 +90,7 @@ extension ViewControllor: UITableViewDelegate, UITableViewDataSource {
         }
         cell.configure(with: cellModel[indexPath.row])
         cell.backgroundColor = .black
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell
     }
         
