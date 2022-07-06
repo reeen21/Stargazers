@@ -24,11 +24,25 @@ class DetailViewController: UIViewController {
     @IBOutlet var contentLabel: UITextView!
     
     var results: Results!
+    private var bigImageButton: UIBarButtonItem!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
+        
         setData()
+        
+        bigImageButton = UIBarButtonItem(title: "大きい写真", style: .done, target: self, action: #selector(DetailImage(_:)))
+        navigationItem.rightBarButtonItem = bigImageButton
+        navigationItem.rightBarButtonItem?.tintColor = .darkGray
+    }
+    @objc func DetailImage(_ sender: UIBarButtonItem) {
+        let result = results!
+        let detail = self.storyboard?.instantiateViewController(withIdentifier: "Big") as! BigImageView
+        detail.starImageUrl = result.starImageURL
+        detail.starIconUrl = result.starIconURL
+        self.navigationController?.pushViewController(detail, animated: true)
     }
     
     func setData() {
@@ -43,17 +57,17 @@ class DetailViewController: UIViewController {
         altitudeLabel.text = result.altitude
         nowDirection.text = "今の方角"
         
-        altitudeNumLabel.textColor = .white
-        altitudeLabel.textColor = .white
-        directionLabel.textColor = .white
-        nowDirection.textColor = .white
-        jpNameLabel.textColor = .white
-        directionNumLabel.textColor = .white
-        seasonLabel.textColor = .white
+        altitudeNumLabel.textColor = .darkGray
+        altitudeLabel.textColor = .darkGray
+        directionLabel.textColor = .darkGray
+        nowDirection.textColor = .darkGray
+        jpNameLabel.textColor = .darkGray
+        directionNumLabel.textColor = .darkGray
+        seasonLabel.textColor = .darkGray
         originLabel.backgroundColor = .clear
-        originLabel.textColor = .white
+        originLabel.textColor = .darkGray
         contentLabel.backgroundColor = .clear
-        contentLabel.textColor = .white
+        contentLabel.textColor = .darkGray
         
         let starImageUrl = result.starImageURL
         starImageView.layer.borderWidth = 0.3

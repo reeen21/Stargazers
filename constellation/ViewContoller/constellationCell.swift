@@ -21,8 +21,8 @@ class constellationCell: UITableViewCell {
         constellationName.font = UIFont.monospacedDigitSystemFont(ofSize: 18, weight: .bold)
         directionLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 14, weight: .medium)
         
-        constellationName.textColor = .white
-        directionLabel.textColor = .lightGray
+        constellationName.textColor = .darkGray
+        directionLabel.textColor = .darkGray
         
         starIcon.layer.cornerRadius = 35
         let imageUrl = cellModel.starIconURL
