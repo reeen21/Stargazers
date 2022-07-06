@@ -80,7 +80,6 @@
 				AA502A3989B5C3A34DA5F461 /* Pods-constellation.debug.xcconfig */,
 				954E8939929140C63A2AD858 /* Pods-constellation.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -360,6 +359,8 @@
 				DEVELOPMENT_TEAM = Y5DZ85S2CD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = constellation/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "位置情報";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -389,6 +390,8 @@
 				DEVELOPMENT_TEAM = Y5DZ85S2CD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = constellation/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "位置情報";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
