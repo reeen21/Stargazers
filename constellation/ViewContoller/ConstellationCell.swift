@@ -8,7 +8,7 @@
 import UIKit
 import Nuke
 
-class constellationCell: UITableViewCell {
+class ConstellationCell: UITableViewCell {
     
     @IBOutlet var constellationName: UILabel!
     @IBOutlet var directionLabel: UILabel!
@@ -21,8 +21,8 @@ class constellationCell: UITableViewCell {
         constellationName.font = UIFont.monospacedDigitSystemFont(ofSize: 18, weight: .bold)
         directionLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 14, weight: .medium)
         
-        constellationName.textColor = .darkGray
-        directionLabel.textColor = .darkGray
+        constellationName.textColor = .systemRed
+        directionLabel.textColor = .systemRed
         
         starIcon.layer.cornerRadius = 35
         let imageUrl = cellModel.starIconURL

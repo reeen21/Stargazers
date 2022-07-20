@@ -11,6 +11,8 @@ class APICaller {
     static let shared = APICaller()
     
     func getInfo(lat: Double, lon: Double, MonthAndDay:String, hour: String, min: String, completion: @escaping (Result<[Results], Error>) -> Void) {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         let url = "https://livlog.xyz/hoshimiru/constellation?lat=\(lat)&lng=\(lon)&date=\(MonthAndDay)&hour=\(hour)&min=\(min)"
         guard let urlString = URL(string: url) else {return}
         URLSession.shared.dataTask(with: urlString) { data, _, error in
@@ -18,7 +20,7 @@ class APICaller {
                 completion(.failure(error))
             } else if let data = data {
                 do {
-                    let result = try JSONDecoder().decode(Articles.self, from: data)
+                    let result = try decoder.decode(Articles.self, from: data)
                     completion(.success(result.result))
                 } catch {
                     completion(.failure(error))
