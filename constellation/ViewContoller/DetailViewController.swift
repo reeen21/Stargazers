@@ -6,10 +6,10 @@
 //
 
 import UIKit
-import CoreLocation
 import Nuke
+import CoreLocation
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var starImageView: UIImageView!
     @IBOutlet var starIconImageView: UIImageView!
@@ -22,21 +22,37 @@ class DetailViewController: UIViewController {
     @IBOutlet var jpNameLabel: UILabel!
     @IBOutlet var originLabel: UITextView!
     @IBOutlet var contentLabel: UITextView!
-    
+
+    let locationManager = CLLocationManager()
     var results: Results!
     private var bigImageButton: UIBarButtonItem!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
+        if CLLocationManager.locationServicesEnabled() {
+                    locationManager.delegate = self
+                    
+                    // 何度動いたら更新するか（デフォルトは1度）
+                    locationManager.headingFilter = kCLHeadingFilterNone
+                    
+                    // デバイスのどの向きを北とするか（デフォルトは画面上部）
+                    locationManager.headingOrientation = .portrait
+                    
+                    locationManager.startUpdatingHeading()
+                }
+        
         view.backgroundColor = .black
-        
         setData()
-        
         bigImageButton = UIBarButtonItem(title: "大きい写真", style: .done, target: self, action: #selector(DetailImage(_:)))
         navigationItem.rightBarButtonItem = bigImageButton
-        navigationItem.rightBarButtonItem?.tintColor = .darkGray
+        navigationItem.rightBarButtonItem?.tintColor = .systemRed
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+            self.nowDirection.text = "".appendingFormat("%.2f", newHeading.magneticHeading)
+        }
+    
     @objc func DetailImage(_ sender: UIBarButtonItem) {
         guard let result = results else {return}
         guard let detail = self.storyboard?.instantiateViewController(withIdentifier: "Big") as? BigImageView else {
@@ -51,25 +67,39 @@ class DetailViewController: UIViewController {
         guard let result = results else {return}
         altitudeNumLabel.text = "高度: \(result.altitudeNum)°"
         contentLabel.text = "概説: \(result.content)"
-        directionNumLabel.text = "方角(°)\(result.directionNum)"
+        directionNumLabel.text = "方角: \(result.directionNum)"
         directionLabel.text = "方角: \(result.direction)"
         seasonLabel.text = "季節: \(result.season)"
         jpNameLabel.text = "\(result.jpName) / \(result.jpName)"
+        
         originLabel.text = "起源: \(result.origin)"
         altitudeLabel.text = result.altitude
-        nowDirection.text = "今の方角"
         
-        altitudeNumLabel.textColor = .darkGray
-        altitudeLabel.textColor = .darkGray
-        directionLabel.textColor = .darkGray
-        nowDirection.textColor = .darkGray
-        jpNameLabel.textColor = .darkGray
-        directionNumLabel.textColor = .darkGray
-        seasonLabel.textColor = .darkGray
+        altitudeLabel.font = .systemFont(ofSize: 17.0)
+        altitudeNumLabel.font = .systemFont(ofSize: 17.0)
+        directionLabel.font = .systemFont(ofSize: 17.0)
+        nowDirection.font = .systemFont(ofSize: 17.0)
+        jpNameLabel.font = .systemFont(ofSize: 17.0)
+        directionLabel.font = .systemFont(ofSize: 17.0)
+        seasonLabel.font = .systemFont(ofSize: 17.0)
+        originLabel.font = .systemFont(ofSize: 15.0)
+        contentLabel.font = .systemFont(ofSize: 15.0)
+        
+        altitudeNumLabel.textColor = .systemRed
+        altitudeLabel.textColor = .systemRed
+        directionLabel.textColor = .systemRed
+        nowDirection.textColor = .systemRed
+        jpNameLabel.textColor = .systemRed
+        directionNumLabel.textColor = .systemRed
+        seasonLabel.textColor = .systemRed
         originLabel.backgroundColor = .clear
-        originLabel.textColor = .darkGray
+        originLabel.layer.borderWidth = 0.5
+        originLabel.layer.borderColor = UIColor.darkGray.cgColor
+        originLabel.textColor = .systemRed
         contentLabel.backgroundColor = .clear
-        contentLabel.textColor = .darkGray
+        contentLabel.layer.borderWidth = 0.5
+        contentLabel.layer.borderColor = UIColor.darkGray.cgColor
+        contentLabel.textColor = .systemRed
         
         let starImageUrl = result.starImageURL
         starImageView.layer.borderWidth = 0.3

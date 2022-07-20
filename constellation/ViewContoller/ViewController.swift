@@ -16,8 +16,6 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
     private var cellModel = [CellViewModel]()
     let locationManager = CLLocationManager()
     
-    var lat = 0.0
-    var lon = 0.0
     var MonthAndDay = ""
     var hour = ""
     var min = ""
@@ -30,19 +28,20 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
         view.backgroundColor = .black
         title = "Constellations"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
-        navigationItem.backBarButtonItem?.tintColor = UIColor.darkGray
+        navigationItem.backBarButtonItem?.tintColor = UIColor.systemRed
         navigationController?.navigationBar.barTintColor = .black
         navigationItem.largeTitleDisplayMode = .always
         
-        
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
         if (CLLocationManager.locationServicesEnabled()) {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.headingFilter = kCLHeadingFilterNone
             locationManager.headingOrientation = .portrait
             locationManager.startUpdatingLocation()
+            locationManager.startUpdatingHeading()
         }
     }
     
@@ -51,13 +50,16 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd  HH mm"
         let dateStr = formatter.string(from: now as Date)
-        let dataBase = dateStr.components(separatedBy: " ")
-        MonthAndDay = dataBase[0]
-        hour = dataBase[1]
-        min = dataBase[2]
+        let date = dateStr.components(separatedBy: " ")
+        MonthAndDay = date[0]
+        hour = date[1]
+        min = date[2]
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        let lat = Double(location.coordinate.latitude)
+        let lon = Double(location.coordinate.longitude)
         APICaller.shared.getInfo(lat: lat, lon: lon, MonthAndDay: MonthAndDay, hour: hour, min: min) { [weak self] result in
             switch result {
             case .success(let articles):
@@ -77,15 +79,17 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
             }
         }
     }
+ 
 }
 
 extension ViewControllor: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? constellationCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ConstellationCell else {
             fatalError()
         }
         cell.configure(with: cellModel[indexPath.row])
@@ -93,16 +97,15 @@ extension ViewControllor: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell
     }
-        
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detail = self.storyboard?.instantiateViewController(withIdentifier: "Detail") as! DetailViewController
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         detail.results = result[indexPath.row]
         self.navigationController?.pushViewController(detail, animated: true)
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
-    
-    
 }
