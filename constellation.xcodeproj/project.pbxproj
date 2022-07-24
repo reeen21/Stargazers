@@ -403,6 +403,7 @@
 				DEVELOPMENT_TEAM = Y5DZ85S2CD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = constellation/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Stargazers ";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "位置情報";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -434,6 +435,7 @@
 				DEVELOPMENT_TEAM = Y5DZ85S2CD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = constellation/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Stargazers ";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "位置情報";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
