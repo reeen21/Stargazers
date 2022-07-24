@@ -26,7 +26,7 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
         tableView.dataSource = self
         
         view.backgroundColor = .black
-        title = "Constellations"
+        title = "Stargazers"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.tintColor = UIColor.systemRed
         navigationController?.navigationBar.barTintColor = .black
