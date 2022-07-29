@@ -1,4 +1,5 @@
 # constellation
+[AppStore](https://apps.apple.com/jp/app/stargazers/id1636193581)
 
 ※下記にある通り、夜に使用することを前提にしているので、UIは暗めです。   
 黒を基調とし、文字は赤くしました。赤色は暗順応した目に優しい為です。
