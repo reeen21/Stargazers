@@ -7,8 +7,6 @@ target 'constellation' do
 
   # Pods for constellation
 
-  pod 'Alamofire'
-  pod 'SwiftyJSON'
   pod 'Nuke'
 
 end

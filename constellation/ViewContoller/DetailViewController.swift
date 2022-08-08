@@ -9,6 +9,7 @@ import UIKit
 import Nuke
 import CoreLocation
 
+
 class DetailViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var starImageView: UIImageView!
@@ -22,8 +23,9 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var jpNameLabel: UILabel!
     @IBOutlet var originLabel: UITextView!
     @IBOutlet var contentLabel: UITextView!
-
+    
     let locationManager = CLLocationManager()
+    let hapticFeedback = UINotificationFeedbackGenerator()
     var results: Results!
     private var bigImageButton: UIBarButtonItem!
     
@@ -31,16 +33,15 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         locationManager.delegate = self
         if CLLocationManager.locationServicesEnabled() {
-                    locationManager.delegate = self
-                    
-                    // 何度動いたら更新するか（デフォルトは1度）
-                    locationManager.headingFilter = kCLHeadingFilterNone
-                    
-                    // デバイスのどの向きを北とするか（デフォルトは画面上部）
-                    locationManager.headingOrientation = .portrait
-                    
-                    locationManager.startUpdatingHeading()
-                }
+            locationManager.delegate = self
+            
+            // 何度動いたら更新するか（デフォルトは1度）
+            locationManager.headingFilter = kCLHeadingFilterNone
+            
+            // デバイスのどの向きを北とするか（デフォルトは画面上部）
+            locationManager.headingOrientation = .portrait
+            locationManager.startUpdatingHeading()
+        }
         
         view.backgroundColor = .black
         setData()
@@ -49,31 +50,31 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         navigationItem.rightBarButtonItem?.tintColor = .systemRed
     }
     
+    //現在の端末の上部が指す方向（角度）を返す
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-            self.nowDirection.text = "".appendingFormat("%.2f", newHeading.magneticHeading)
+        guard let result = results else {return}
+        let text = "".appendingFormat("%.0f", newHeading.magneticHeading)
+        self.nowDirection.text = "端末の向き: \(text)°"
+        let formattedNumLabel = "".appendingFormat("%.0f", result.directionNum)
+        if text == formattedNumLabel {
+            hapticFeedback.notificationOccurred(.success)
         }
     
-    @objc func DetailImage(_ sender: UIBarButtonItem) {
-        guard let result = results else {return}
-        guard let detail = self.storyboard?.instantiateViewController(withIdentifier: "Big") as? BigImageView else {
-            fatalError()
-        }
-        detail.starImageUrl = result.starImageURL
-        detail.starIconUrl = result.starIconURL
-        self.navigationController?.pushViewController(detail, animated: true)
     }
     
     func setData() {
         guard let result = results else {return}
         altitudeNumLabel.text = "高度: \(result.altitudeNum)°"
+        altitudeLabel.text = "高度: \(result.altitude)"
         contentLabel.text = "概説: \(result.content)"
-        directionNumLabel.text = "方角: \(result.directionNum)"
-        directionLabel.text = "方角: \(result.direction)"
+        let formattedNumLabel = "".appendingFormat("%.0f", result.directionNum)
+        directionNumLabel.text = "星座の方角: \(formattedNumLabel)°"
+        directionLabel.text = "星座の方角: \(result.direction)"
         seasonLabel.text = "季節: \(result.season)"
         jpNameLabel.text = "\(result.jpName) / \(result.jpName)"
         
         originLabel.text = "起源: \(result.origin)"
-        altitudeLabel.text = result.altitude
+        
         
         altitudeLabel.font = .systemFont(ofSize: 17.0)
         altitudeNumLabel.font = .systemFont(ofSize: 17.0)
@@ -95,11 +96,11 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         originLabel.backgroundColor = .clear
         originLabel.layer.borderWidth = 0.5
         originLabel.layer.borderColor = UIColor.darkGray.cgColor
-        originLabel.textColor = .systemRed
+        originLabel.textColor = .lightGray
         contentLabel.backgroundColor = .clear
         contentLabel.layer.borderWidth = 0.5
         contentLabel.layer.borderColor = UIColor.darkGray.cgColor
-        contentLabel.textColor = .systemRed
+        contentLabel.textColor = .lightGray
         
         let starImageUrl = result.starImageURL
         starImageView.layer.borderWidth = 0.3
@@ -110,5 +111,15 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         starIconImageView.layer.borderWidth = 0.3
         starIconImageView.layer.borderColor = UIColor.lightGray.cgColor
         Nuke.loadImage(with: starIconUrl, into: starIconImageView)
+    }
+    
+    @objc func DetailImage(_ sender: UIBarButtonItem) {
+        guard let result = results else {return}
+        guard let detail = self.storyboard?.instantiateViewController(withIdentifier: "Big") as? BigImageView else {
+            fatalError()
+        }
+        detail.starImageUrl = result.starImageURL
+        detail.starIconUrl = result.starIconURL
+        self.navigationController?.pushViewController(detail, animated: true)
     }
 }
