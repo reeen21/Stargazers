@@ -15,6 +15,7 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
     private var result = [Results]()
     private var cellModel = [CellViewModel]()
     let locationManager = CLLocationManager()
+    let decoder = JSONDecoder()
     
     var MonthAndDay = ""
     var hour = ""
@@ -79,8 +80,7 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
             }
         }
     }
- 
-}
+ }
 
 extension ViewControllor: UITableViewDelegate, UITableViewDataSource {
     
