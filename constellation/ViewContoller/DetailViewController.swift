@@ -9,7 +9,6 @@ import UIKit
 import Nuke
 import CoreLocation
 
-
 class DetailViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var starImageView: UIImageView!
@@ -42,7 +41,6 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.headingOrientation = .portrait
             locationManager.startUpdatingHeading()
         }
-        
         view.backgroundColor = .black
         setData()
         bigImageButton = UIBarButtonItem(title: "大きい写真", style: .done, target: self, action: #selector(DetailImage(_:)))
@@ -62,6 +60,7 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
     
     }
     
+    //各テキストにデータを入れる　fontやsize を設定
     func setData() {
         guard let result = results else {return}
         altitudeNumLabel.text = "高度: \(result.altitudeNum)°"
@@ -72,7 +71,6 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         directionLabel.text = "星座の方角: \(result.direction)"
         seasonLabel.text = "季節: \(result.season)"
         jpNameLabel.text = "\(result.jpName) / \(result.jpName)"
-        
         originLabel.text = "起源: \(result.origin)"
         
         
@@ -113,6 +111,7 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         Nuke.loadImage(with: starIconUrl, into: starIconImageView)
     }
     
+    //写真を表示する
     @objc func DetailImage(_ sender: UIBarButtonItem) {
         guard let result = results else {return}
         guard let detail = self.storyboard?.instantiateViewController(withIdentifier: "Big") as? BigImageView else {

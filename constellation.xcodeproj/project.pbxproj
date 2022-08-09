@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		06C3F8486BB4A152E498FD7B /* Pods_constellation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F63FD8AA7F2A1EE092287D7 /* Pods_constellation.framework */; };
+		4B24774728A229E300F7F646 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B24774628A229E300F7F646 /* CellViewModel.swift */; };
 		4B69A0F72875B4E500BBDF17 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A0F62875B4E500BBDF17 /* APICaller.swift */; };
-		4B69A0FC2875B68F00BBDF17 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A0FB2875B68F00BBDF17 /* model.swift */; };
+		4B69A0FC2875B68F00BBDF17 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A0FB2875B68F00BBDF17 /* Articles.swift */; };
 		4B69A0FE2875BC1100BBDF17 /* ConstellationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A0FD2875BC1100BBDF17 /* ConstellationCell.swift */; };
 		4B69A1002875D0F200BBDF17 /* BigImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A0FF2875D0F200BBDF17 /* BigImageView.swift */; };
 		4BA4FF112874584900A6F167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4FF102874584900A6F167 /* AppDelegate.swift */; };
@@ -23,8 +24,9 @@
 
 /* Begin PBXFileReference section */
 		3F63FD8AA7F2A1EE092287D7 /* Pods_constellation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_constellation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B24774628A229E300F7F646 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		4B69A0F62875B4E500BBDF17 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
-		4B69A0FB2875B68F00BBDF17 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		4B69A0FB2875B68F00BBDF17 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		4B69A0FD2875BC1100BBDF17 /* ConstellationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstellationCell.swift; sourceTree = "<group>"; };
 		4B69A0FF2875D0F200BBDF17 /* BigImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigImageView.swift; sourceTree = "<group>"; };
 		4BA4FF0D2874584900A6F167 /* constellation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = constellation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				4B69A0F62875B4E500BBDF17 /* APICaller.swift */,
-				4B69A0FB2875B68F00BBDF17 /* model.swift */,
+				4B69A0FB2875B68F00BBDF17 /* Articles.swift */,
+				4B24774628A229E300F7F646 /* CellViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,9 +249,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BA4FF152874584900A6F167 /* DetailViewController.swift in Sources */,
-				4B69A0FC2875B68F00BBDF17 /* model.swift in Sources */,
+				4B69A0FC2875B68F00BBDF17 /* Articles.swift in Sources */,
 				4B69A0FE2875BC1100BBDF17 /* ConstellationCell.swift in Sources */,
 				4BA4FF112874584900A6F167 /* AppDelegate.swift in Sources */,
+				4B24774728A229E300F7F646 /* CellViewModel.swift in Sources */,
 				4BC2ECDA28758058005F3B0B /* ViewController.swift in Sources */,
 				4B69A1002875D0F200BBDF17 /* BigImageView.swift in Sources */,
 				4B69A0F72875B4E500BBDF17 /* APICaller.swift in Sources */,
@@ -399,7 +403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = Y5DZ85S2CD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = constellation/Info.plist;
@@ -415,7 +419,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ren.constellation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -431,7 +435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = Y5DZ85S2CD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = constellation/Info.plist;
@@ -447,7 +451,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ren.constellation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
