@@ -179,7 +179,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nbV-Lh-IfL">
-                                <rect key="frame" x="0.0" y="440" width="414" height="402"/>
+                                <rect key="frame" x="5" y="440" width="414" height="402"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1mS-jv-h8i">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
@@ -205,17 +205,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nbV-Lh-IfL" firstAttribute="top" secondItem="nqz-pe-7Jm" secondAttribute="bottom" constant="20" id="2XX-4t-Hfd"/>
-                            <constraint firstItem="nbV-Lh-IfL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5gB-fH-ybE"/>
                             <constraint firstItem="nqz-pe-7Jm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8q4-ZC-5oM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nbV-Lh-IfL" secondAttribute="bottom" constant="20" id="Pbc-Jf-6vo"/>
-                            <constraint firstAttribute="trailing" secondItem="nbV-Lh-IfL" secondAttribute="trailing" id="QNx-3L-ONR"/>
                             <constraint firstItem="9qi-ar-Raa" firstAttribute="top" secondItem="YX5-hY-fae" secondAttribute="bottom" constant="10" id="RYq-cr-Kmb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nqz-pe-7Jm" secondAttribute="trailing" id="RkN-3N-fj8"/>
                             <constraint firstItem="9qi-ar-Raa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WxS-Gz-kuI"/>
                             <constraint firstItem="YX5-hY-fae" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cqT-uC-2vS"/>
+                            <constraint firstItem="nbV-Lh-IfL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="5" id="gYC-Uu-QTb"/>
                             <constraint firstItem="nbV-Lh-IfL" firstAttribute="top" secondItem="nqz-pe-7Jm" secondAttribute="bottom" constant="20" id="gwz-Y6-kmz"/>
-                            <constraint firstItem="nbV-Lh-IfL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n6c-Rk-Lk2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YX5-hY-fae" secondAttribute="trailing" id="oOM-Ib-Ydb"/>
+                            <constraint firstItem="nbV-Lh-IfL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="oZq-tv-k7B"/>
                             <constraint firstItem="nqz-pe-7Jm" firstAttribute="top" secondItem="9qi-ar-Raa" secondAttribute="bottom" constant="10" id="ucD-PC-41t"/>
                             <constraint firstItem="YX5-hY-fae" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="vQh-es-uPT"/>
                         </constraints>
