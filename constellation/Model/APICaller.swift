@@ -27,9 +27,6 @@ class APICaller {
                     print("getInfoでエラーが発生しました", error)
                 }
             }
-        }.resume()
-        
+        }.resume()        
     }
-    
-    
 }

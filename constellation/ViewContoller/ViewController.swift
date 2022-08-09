@@ -11,7 +11,6 @@ import UIKit
 class ViewControllor: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var tableView: UITableView!
-    
     private var result = [Results]()
     private var cellModel = [CellViewModel]()
     let locationManager = CLLocationManager()
@@ -46,6 +45,7 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    //時刻を取得し、APIに情報を渡す
     func date() {
         let now = Date()
         let formatter = DateFormatter()
@@ -57,6 +57,7 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
         min = date[2]
     }
     
+    //位置情報を取得
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         let lat = Double(location.coordinate.latitude)
@@ -82,6 +83,7 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
     }
  }
 
+//MARK: - Extensions
 extension ViewControllor: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
