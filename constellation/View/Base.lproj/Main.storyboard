@@ -178,22 +178,19 @@
                                     <constraint firstAttribute="height" constant="70" id="jgJ-5N-u92"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nbV-Lh-IfL">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nbV-Lh-IfL">
                                 <rect key="frame" x="5" y="440" width="414" height="402"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1mS-jv-h8i">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="origin" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qo-V0-MYB">
-                                        <rect key="frame" x="0.0" y="202" width="414" height="200"/>
+                                        <rect key="frame" x="0.0" y="201" width="414" height="201"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="8nS-DE-6LI"/>
-                                        </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -212,7 +209,6 @@
                             <constraint firstItem="9qi-ar-Raa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WxS-Gz-kuI"/>
                             <constraint firstItem="YX5-hY-fae" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cqT-uC-2vS"/>
                             <constraint firstItem="nbV-Lh-IfL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="5" id="gYC-Uu-QTb"/>
-                            <constraint firstItem="nbV-Lh-IfL" firstAttribute="top" secondItem="nqz-pe-7Jm" secondAttribute="bottom" constant="20" id="gwz-Y6-kmz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YX5-hY-fae" secondAttribute="trailing" id="oOM-Ib-Ydb"/>
                             <constraint firstItem="nbV-Lh-IfL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="oZq-tv-k7B"/>
                             <constraint firstItem="nqz-pe-7Jm" firstAttribute="top" secondItem="9qi-ar-Raa" secondAttribute="bottom" constant="10" id="ucD-PC-41t"/>
