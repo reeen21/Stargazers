@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Nuke
 
 class ConstellationCell: UITableViewCell {
     
@@ -26,6 +25,6 @@ class ConstellationCell: UITableViewCell {
         
         starIcon.layer.cornerRadius = 35
         let imageUrl = cellModel.starIconURL
-        Nuke.loadImage(with: imageUrl, into: starIcon)
+       // Nuke.loadImage(with: imageUrl, into: starIcon)
     }
 }

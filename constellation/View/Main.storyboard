@@ -178,18 +178,18 @@
                                     <constraint firstAttribute="height" constant="70" id="jgJ-5N-u92"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nbV-Lh-IfL">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nbV-Lh-IfL">
                                 <rect key="frame" x="5" y="440" width="414" height="402"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1mS-jv-h8i">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="199"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="origin" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qo-V0-MYB">
-                                        <rect key="frame" x="0.0" y="201" width="414" height="201"/>
+                                        <rect key="frame" x="0.0" y="203" width="414" height="199"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>

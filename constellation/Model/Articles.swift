@@ -7,6 +7,8 @@
 
 import Foundation
 
+import Foundation
+
 struct Articles: Codable {
     let result: [Results]
 }
@@ -33,4 +35,3 @@ struct Results: Codable {
         return URL(string: starIcon)
     }
 }
-

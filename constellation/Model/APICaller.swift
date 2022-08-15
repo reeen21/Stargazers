@@ -24,7 +24,7 @@ class APICaller {
                     completion(.success(result.result))
                 } catch {
                     completion(.failure(error))
-                    print("getInfoでエラーが発生しました", error)
+                    print("getInfo()でエラーが発生", error)
                 }
             }
         }.resume()        
