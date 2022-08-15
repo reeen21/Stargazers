@@ -9,32 +9,32 @@ import CoreLocation
 import UIKit
 
 class ViewControllor: UIViewController, CLLocationManagerDelegate {
-    
+
     @IBOutlet var tableView: UITableView!
     private var result = [Results]()
     private var cellModel = [CellViewModel]()
     let locationManager = CLLocationManager()
     let decoder = JSONDecoder()
-    
+
     var MonthAndDay = ""
     var hour = ""
     var min = ""
-    
+
     override func viewDidLoad() {
         date()
         tableView.delegate = self
         tableView.dataSource = self
-        
+
         view.backgroundColor = .black
         title = "Stargazers"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.tintColor = UIColor.systemRed
         navigationController?.navigationBar.barTintColor = .black
         navigationItem.largeTitleDisplayMode = .always
-        
+
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        
+
         if (CLLocationManager.locationServicesEnabled()) {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -44,7 +44,7 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
             locationManager.startUpdatingHeading()
         }
     }
-    
+
     //時刻を取得し、APIに情報を渡す
     func date() {
         let now = Date()
@@ -56,7 +56,7 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
         hour = date[1]
         min = date[2]
     }
-    
+
     //位置情報を取得
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
@@ -85,11 +85,11 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
 
 //MARK: - Extensions
 extension ViewControllor: UITableViewDelegate, UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellModel.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ConstellationCell else {
             fatalError()
@@ -99,14 +99,14 @@ extension ViewControllor: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detail = self.storyboard?.instantiateViewController(withIdentifier: "Detail") as! DetailViewController
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         detail.results = result[indexPath.row]
         self.navigationController?.pushViewController(detail, animated: true)
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }

@@ -6,11 +6,10 @@
 //
 
 import UIKit
-import Nuke
 import CoreLocation
 
 class DetailViewController: UIViewController, CLLocationManagerDelegate {
-    
+
     @IBOutlet var starImageView: UIImageView!
     @IBOutlet var starIconImageView: UIImageView!
     @IBOutlet var altitudeNumLabel: UILabel!
@@ -22,21 +21,21 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var jpNameLabel: UILabel!
     @IBOutlet var originLabel: UITextView!
     @IBOutlet var contentLabel: UITextView!
-    
+
     let locationManager = CLLocationManager()
     let hapticFeedback = UINotificationFeedbackGenerator()
     var results: Results!
     private var bigImageButton: UIBarButtonItem!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
-            
+
             // 何度動いたら更新するか（デフォルトは1度）
             locationManager.headingFilter = kCLHeadingFilterNone
-            
+
             // デバイスのどの向きを北とするか（デフォルトは画面上部）
             locationManager.headingOrientation = .portrait
             locationManager.startUpdatingHeading()
@@ -47,7 +46,7 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         navigationItem.rightBarButtonItem = bigImageButton
         navigationItem.rightBarButtonItem?.tintColor = .systemRed
     }
-    
+
     //現在の端末の上部が指す方向（角度）を返す
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         guard let result = results else {return}
@@ -57,10 +56,10 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         if text == formattedNumLabel {
             hapticFeedback.notificationOccurred(.success)
         }
-    
+
     }
-    
-    //各テキストにデータを入れる　fontやsize を設定
+
+    //各テキストにデータを入れる　fontやsizeを設定
     func setData() {
         guard let result = results else {return}
         altitudeNumLabel.text = "高度: \(result.altitudeNum)°"
@@ -72,8 +71,8 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         seasonLabel.text = "季節: \(result.season)"
         jpNameLabel.text = "\(result.jpName) / \(result.jpName)"
         originLabel.text = "起源: \(result.origin)"
-        
-        
+
+
         altitudeLabel.font = .systemFont(ofSize: 17.0)
         altitudeNumLabel.font = .systemFont(ofSize: 17.0)
         directionLabel.font = .systemFont(ofSize: 17.0)
@@ -83,7 +82,7 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         seasonLabel.font = .systemFont(ofSize: 17.0)
         originLabel.font = .systemFont(ofSize: 15.0)
         contentLabel.font = .systemFont(ofSize: 15.0)
-        
+
         altitudeNumLabel.textColor = .systemRed
         altitudeLabel.textColor = .systemRed
         directionLabel.textColor = .systemRed
@@ -99,18 +98,18 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         contentLabel.layer.borderWidth = 0.5
         contentLabel.layer.borderColor = UIColor.darkGray.cgColor
         contentLabel.textColor = .lightGray
-        
-        let starImageUrl = result.starImageURL
+
+        //let starImageUrl = result.starImageURL
         starImageView.layer.borderWidth = 0.3
         starImageView.layer.borderColor = UIColor.lightGray.cgColor
-        Nuke.loadImage(with: starImageUrl, into: starImageView)
-        
-        let starIconUrl = result.starIconURL
+        //Nuke.loadImage(with: starImageUrl, into: starImageView)
+
+        //let starIconUrl = result.starIconURL
         starIconImageView.layer.borderWidth = 0.3
         starIconImageView.layer.borderColor = UIColor.lightGray.cgColor
-        Nuke.loadImage(with: starIconUrl, into: starIconImageView)
+        //Nuke.loadImage(with: starIconUrl, into: starIconImageView)
     }
-    
+
     //写真を表示する
     @objc func DetailImage(_ sender: UIBarButtonItem) {
         guard let result = results else {return}
