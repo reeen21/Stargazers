@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import Nuke
 
 class DetailViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -98,15 +99,15 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         contentLabel.layer.borderColor = UIColor.darkGray.cgColor
         contentLabel.textColor = .lightGray
         
-        //let starImageUrl = result.starImageURL
+        let starImageUrl = result.starImageURL
         starImageView.layer.borderWidth = 0.3
         starImageView.layer.borderColor = UIColor.lightGray.cgColor
-        //Nuke.loadImage(with: starImageUrl, into: starImageView)
+        Nuke.loadImage(with: starImageUrl, into: starImageView)
         
-        //let starIconUrl = result.starIconURL
+        let starIconUrl = result.starIconURL
         starIconImageView.layer.borderWidth = 0.3
         starIconImageView.layer.borderColor = UIColor.lightGray.cgColor
-        //Nuke.loadImage(with: starIconUrl, into: starIconImageView)
+        Nuke.loadImage(with: starIconUrl, into: starIconImageView)
     }
 
     //写真を表示する

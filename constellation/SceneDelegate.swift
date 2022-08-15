@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        sleep(3)
+        sleep(2)
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

@@ -7,6 +7,7 @@
 
 import CoreLocation
 import UIKit
+import Nuke
 
 class ViewControllor: UIViewController, CLLocationManagerDelegate {
 
