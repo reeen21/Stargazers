@@ -24,7 +24,11 @@ class ConstellationCell: UITableViewCell {
         directionLabel.textColor = .systemRed
         
         starIcon.layer.cornerRadius = 35
+<<<<<<< HEAD
         let imageUrl = cellModel.starIconURL
+=======
+        //let imageUrl = cellModel.starIconURL
+>>>>>>> refs/remotes/origin/main
        // Nuke.loadImage(with: imageUrl, into: starIcon)
     }
 }

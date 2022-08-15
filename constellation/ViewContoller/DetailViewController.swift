@@ -58,7 +58,11 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         }
 
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> refs/remotes/origin/main
     //各テキストにデータを入れる　fontやsizeを設定
     func setData() {
         guard let result = results else {return}
@@ -98,12 +102,20 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         contentLabel.layer.borderWidth = 0.5
         contentLabel.layer.borderColor = UIColor.darkGray.cgColor
         contentLabel.textColor = .lightGray
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> refs/remotes/origin/main
         //let starImageUrl = result.starImageURL
         starImageView.layer.borderWidth = 0.3
         starImageView.layer.borderColor = UIColor.lightGray.cgColor
         //Nuke.loadImage(with: starImageUrl, into: starImageView)
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> refs/remotes/origin/main
         //let starIconUrl = result.starIconURL
         starIconImageView.layer.borderWidth = 0.3
         starIconImageView.layer.borderColor = UIColor.lightGray.cgColor
