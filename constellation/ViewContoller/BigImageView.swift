@@ -19,11 +19,7 @@ class BigImageView: UIViewController {
         view.backgroundColor = .black
 //        Nuke.loadImage(with: starImageUrl, into: starImage)
 //        Nuke.loadImage(with: starIconUrl, into: starIcon)
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> refs/remotes/origin/main
         starImage.layer.borderWidth = 0.3
         starImage.layer.borderColor = UIColor.lightGray.cgColor
         starIcon.layer.borderWidth = 0.3

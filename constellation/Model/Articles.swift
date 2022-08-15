@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 struct Articles: Codable {
     let result: [Results]
 }
