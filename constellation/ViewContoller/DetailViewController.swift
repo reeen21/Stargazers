@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Nuke
 import CoreLocation
 
 class DetailViewController: UIViewController, CLLocationManagerDelegate {
@@ -60,7 +59,7 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
     
     }
     
-    //各テキストにデータを入れる　fontやsize を設定
+    //各テキストにデータを入れる　fontやsizeを設定
     func setData() {
         guard let result = results else {return}
         altitudeNumLabel.text = "高度: \(result.altitudeNum)°"
@@ -100,15 +99,15 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         contentLabel.layer.borderColor = UIColor.darkGray.cgColor
         contentLabel.textColor = .lightGray
         
-        let starImageUrl = result.starImageURL
+        //let starImageUrl = result.starImageURL
         starImageView.layer.borderWidth = 0.3
         starImageView.layer.borderColor = UIColor.lightGray.cgColor
-        Nuke.loadImage(with: starImageUrl, into: starImageView)
+        //Nuke.loadImage(with: starImageUrl, into: starImageView)
         
-        let starIconUrl = result.starIconURL
+        //let starIconUrl = result.starIconURL
         starIconImageView.layer.borderWidth = 0.3
         starIconImageView.layer.borderColor = UIColor.lightGray.cgColor
-        Nuke.loadImage(with: starIconUrl, into: starIconImageView)
+        //Nuke.loadImage(with: starIconUrl, into: starIconImageView)
     }
     
     //写真を表示する
