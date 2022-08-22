@@ -64,13 +64,22 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         guard let result = results else {return}
         altitudeNumLabel.text = "高度: \(result.altitudeNum)°"
         altitudeLabel.text = "高度: \(result.altitude)"
-        contentLabel.text = "概説: \(result.content)"
         let formattedNumLabel = "".appendingFormat("%.0f", result.directionNum)
         directionNumLabel.text = "星座の方角: \(formattedNumLabel)°"
         directionLabel.text = "星座の方角: \(result.direction)"
         seasonLabel.text = "季節: \(result.season)"
-        jpNameLabel.text = "\(result.jpName) / \(result.jpName)"
-        originLabel.text = "起源: \(result.origin)"
+        jpNameLabel.text = "\(result.jpName) / \(result.enName)"
+        if result.origin == "なし" {
+            originLabel.text = "データがありません"
+        } else {
+            originLabel.text = "起源: \(result.origin)"
+        }
+        
+        if result.content == "なし" {
+            contentLabel.text = "データがありません"
+        } else {
+            contentLabel.text = "概説: \(result.content)"
+        }
 
 
         altitudeLabel.font = .systemFont(ofSize: 17.0)
