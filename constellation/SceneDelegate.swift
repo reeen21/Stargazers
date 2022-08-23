@@ -13,7 +13,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+<<<<<<< HEAD
         sleep(3)
+=======
+        sleep(2)
+>>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
