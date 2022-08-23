@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		3A32A48CDFECE92C1A22A46C /* Pods_constellation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A286E533E15F9CF4C4CDC608 /* Pods_constellation.framework */; };
+=======
+>>>>>>> 23f00c5 (git-reflog後の修正)
 		4B65A3C328A9E69600D710C6 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B65A3C228A9E69600D710C6 /* CellViewModel.swift */; };
 		4B65A3C728A9F56600D710C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B65A3C628A9F56600D710C6 /* Main.storyboard */; };
 		4B69A0F72875B4E500BBDF17 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A0F62875B4E500BBDF17 /* APICaller.swift */; };
@@ -23,7 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		0528BF00746AA8494436D3B3 /* Pods-constellation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-constellation.release.xcconfig"; path = "Target Support Files/Pods-constellation/Pods-constellation.release.xcconfig"; sourceTree = "<group>"; };
+=======
+>>>>>>> 23f00c5 (git-reflog後の修正)
 		4B65A3C228A9E69600D710C6 /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		4B65A3C628A9F56600D710C6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4B69A0F62875B4E500BBDF17 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
@@ -38,11 +44,14 @@
 		4BA4FF1C2874584A00A6F167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BA4FF1E2874584A00A6F167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BC2ECD928758058005F3B0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		5B99271F9B0F336CF9AEEBC6 /* Pods-constellation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-constellation.release.xcconfig"; path = "Target Support Files/Pods-constellation/Pods-constellation.release.xcconfig"; sourceTree = "<group>"; };
 		A286E533E15F9CF4C4CDC608 /* Pods_constellation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_constellation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5213375A4E5FA47DB402F00 /* Pods-constellation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-constellation.debug.xcconfig"; path = "Target Support Files/Pods-constellation/Pods-constellation.debug.xcconfig"; sourceTree = "<group>"; };
 		A286E533E15F9CF4C4CDC608 /* Pods_constellation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_constellation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD8B2F0D13D3BF0EAB5971B5 /* Pods-constellation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-constellation.debug.xcconfig"; path = "Target Support Files/Pods-constellation/Pods-constellation.debug.xcconfig"; sourceTree = "<group>"; };
+=======
+>>>>>>> 23f00c5 (git-reflog後の修正)
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
