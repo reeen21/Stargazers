@@ -23,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
+=======
+		0528BF00746AA8494436D3B3 /* Pods-constellation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-constellation.release.xcconfig"; path = "Target Support Files/Pods-constellation/Pods-constellation.release.xcconfig"; sourceTree = "<group>"; };
+>>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 		4B65A3C228A9E69600D710C6 /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		4B65A3C628A9F56600D710C6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4B69A0F62875B4E500BBDF17 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
@@ -37,9 +41,14 @@
 		4BA4FF1C2874584A00A6F167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BA4FF1E2874584A00A6F167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BC2ECD928758058005F3B0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		5B99271F9B0F336CF9AEEBC6 /* Pods-constellation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-constellation.release.xcconfig"; path = "Target Support Files/Pods-constellation/Pods-constellation.release.xcconfig"; sourceTree = "<group>"; };
 		A286E533E15F9CF4C4CDC608 /* Pods_constellation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_constellation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5213375A4E5FA47DB402F00 /* Pods-constellation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-constellation.debug.xcconfig"; path = "Target Support Files/Pods-constellation/Pods-constellation.debug.xcconfig"; sourceTree = "<group>"; };
+=======
+		A286E533E15F9CF4C4CDC608 /* Pods_constellation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_constellation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD8B2F0D13D3BF0EAB5971B5 /* Pods-constellation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-constellation.debug.xcconfig"; path = "Target Support Files/Pods-constellation/Pods-constellation.debug.xcconfig"; sourceTree = "<group>"; };
+>>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+=======
+		264723731CAD40FC2A6F60A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B2F0D13D3BF0EAB5971B5 /* Pods-constellation.debug.xcconfig */,
+				0528BF00746AA8494436D3B3 /* Pods-constellation.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+>>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 		4B69A0F82875B65900BBDF17 /* ViewContoller */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +118,13 @@
 			children = (
 				4BA4FF0F2874584900A6F167 /* constellation */,
 				4BA4FF0E2874584900A6F167 /* Products */,
+<<<<<<< HEAD
 				1B4F6860A33C06E27276FF88 /* Frameworks */,
 				4E5F24B3F7E1F6DA992D3D41 /* Pods */,
+=======
+				264723731CAD40FC2A6F60A8 /* Pods */,
+				1B4F6860A33C06E27276FF88 /* Frameworks */,
+>>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +150,7 @@
 			path = constellation;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		4E5F24B3F7E1F6DA992D3D41 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +161,8 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+=======
+>>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -391,7 +420,11 @@
 		};
 		4BA4FF222874584A00A6F167 /* Debug */ = {
 			isa = XCBuildConfiguration;
+<<<<<<< HEAD
 			baseConfigurationReference = B5213375A4E5FA47DB402F00 /* Pods-constellation.debug.xcconfig */;
+=======
+			baseConfigurationReference = BD8B2F0D13D3BF0EAB5971B5 /* Pods-constellation.debug.xcconfig */;
+>>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -423,7 +456,11 @@
 		};
 		4BA4FF232874584A00A6F167 /* Release */ = {
 			isa = XCBuildConfiguration;
+<<<<<<< HEAD
 			baseConfigurationReference = 5B99271F9B0F336CF9AEEBC6 /* Pods-constellation.release.xcconfig */;
+=======
+			baseConfigurationReference = 0528BF00746AA8494436D3B3 /* Pods-constellation.release.xcconfig */;
+>>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

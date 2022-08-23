@@ -12,10 +12,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
 
+<<<<<<< HEAD
      func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
          sleep(2)
          guard let _ = (scene as? UIWindowScene) else { return }
      }
+=======
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        sleep(2)
+        guard let _ = (scene as? UIWindowScene) else { return }
+    }
+>>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

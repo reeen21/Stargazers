@@ -84,7 +84,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39Q-Ss-NQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD:constellation/View/Main.storyboard
             <point key="canvasLocation" x="3539" y="33"/>
+=======
+            <point key="canvasLocation" x="3546" y="33"/>
+>>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d:constellation/View/Base.lproj/Main.storyboard
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -295,7 +299,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evH-Zp-k8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD:constellation/View/Main.storyboard
             <point key="canvasLocation" x="2667" y="33"/>
+=======
+            <point key="canvasLocation" x="2857" y="33"/>
+>>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d:constellation/View/Base.lproj/Main.storyboard
         </scene>
     </scenes>
     <resources>

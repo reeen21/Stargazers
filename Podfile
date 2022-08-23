@@ -6,6 +6,10 @@ target 'constellation' do
   use_frameworks!
 
   # Pods for constellation
+<<<<<<< HEAD
   pod "Nuke" 
+=======
+pod 'Nuke'
+>>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 
 end
