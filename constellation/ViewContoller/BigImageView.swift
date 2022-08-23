@@ -25,7 +25,7 @@ class BigImageView: UIViewController {
         starImage.layer.borderColor = UIColor.lightGray.cgColor
         starIcon.layer.borderWidth = 0.3
         starIcon.layer.borderColor = UIColor.lightGray.cgColor
-       
-    }
 
+        navigationController?.navigationBar.tintColor = UIColor.systemRed
+    }
 }
