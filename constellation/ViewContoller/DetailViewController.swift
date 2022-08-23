@@ -108,12 +108,21 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         contentLabel.layer.borderColor = UIColor.darkGray.cgColor
         contentLabel.textColor = .lightGray
         
+<<<<<<< HEAD
         let starImageUrl = result.starImageURL
         starImageView.layer.borderWidth = 0.3
         starImageView.layer.borderColor = UIColor.lightGray.cgColor
         Nuke.loadImage(with: starImageUrl, into: starImageView)
         
         let starIconUrl = result.starIconURL
+=======
+        //let starImageUrl = result.starImageURL
+        starImageView.layer.borderWidth = 0.3
+        starImageView.layer.borderColor = UIColor.lightGray.cgColor
+        //Nuke.loadImage(with: starImageUrl, into: starImageView)
+        
+        //let starIconUrl = result.starIconURL
+>>>>>>> 171410c (reset)
         starIconImageView.layer.borderWidth = 0.3
         starIconImageView.layer.borderColor = UIColor.lightGray.cgColor
         Nuke.loadImage(with: starIconUrl, into: starIconImageView)

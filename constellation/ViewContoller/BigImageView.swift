@@ -17,8 +17,13 @@ class BigImageView: UIViewController {
     
     override func viewDidLoad() {
         view.backgroundColor = .black
+<<<<<<< HEAD
         Nuke.loadImage(with: starImageUrl, into: starImage)
         Nuke.loadImage(with: starIconUrl, into: starIcon)
+=======
+//        Nuke.loadImage(with: starImageUrl, into: starImage)
+//        Nuke.loadImage(with: starIconUrl, into: starIcon)
+>>>>>>> 171410c (reset)
 
         starImage.layer.borderWidth = 0.3
         starImage.layer.borderColor = UIColor.lightGray.cgColor
