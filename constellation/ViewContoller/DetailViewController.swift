@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import Nuke
 
 class DetailViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -58,32 +59,15 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         }
 
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> cafcbf3 (SwiftUi移行に向けた準備)
-    //各テキストにデータを入れる　fontやsizeを設定
-=======
 //各テキストにデータを入れる　fontやsizeを設定
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
     func setData() {
         guard let result = results else {return}
         altitudeNumLabel.text = "高度: \(result.altitudeNum)°"
         altitudeLabel.text = "高度: \(result.altitude)"
-<<<<<<< HEAD
-        contentLabel.text = "概説: \(result.content)"
-=======
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
         let formattedNumLabel = "".appendingFormat("%.0f", result.directionNum)
         directionNumLabel.text = "星座の方角: \(formattedNumLabel)°"
         directionLabel.text = "星座の方角: \(result.direction)"
         seasonLabel.text = "季節: \(result.season)"
-<<<<<<< HEAD
-        jpNameLabel.text = "\(result.jpName) / \(result.jpName)"
-        originLabel.text = "起源: \(result.origin)"
-=======
         jpNameLabel.text = "\(result.jpName) / \(result.enName)"
         if result.origin == "なし" {
             originLabel.text = "データがありません"
@@ -96,7 +80,6 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             contentLabel.text = "概説: \(result.content)"
         }
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 
 
         altitudeLabel.font = .systemFont(ofSize: 17.0)
@@ -124,46 +107,16 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         contentLabel.layer.borderWidth = 0.5
         contentLabel.layer.borderColor = UIColor.darkGray.cgColor
         contentLabel.textColor = .lightGray
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
         
->>>>>>> cafcbf3 (SwiftUi移行に向けた準備)
-        //let starImageUrl = result.starImageURL
+        let starImageUrl = result.starImageURL
         starImageView.layer.borderWidth = 0.3
         starImageView.layer.borderColor = UIColor.lightGray.cgColor
-<<<<<<< HEAD
-        //Nuke.loadImage(with: starImageUrl, into: starImageView)
-<<<<<<< HEAD
-
-=======
-=======
         Nuke.loadImage(with: starImageUrl, into: starImageView)
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
         
->>>>>>> cafcbf3 (SwiftUi移行に向けた準備)
-        //let starIconUrl = result.starIconURL
+        let starIconUrl = result.starIconURL
         starIconImageView.layer.borderWidth = 0.3
         starIconImageView.layer.borderColor = UIColor.lightGray.cgColor
-<<<<<<< HEAD
-        //Nuke.loadImage(with: starIconUrl, into: starIconImageView)
-    }
-
-    //写真を表示する
-    @objc func DetailImage(_ sender: UIBarButtonItem) {
-        guard let result = results else {return}
-        guard let detail = self.storyboard?.instantiateViewController(withIdentifier: "Big") as? BigImageView else {
-            fatalError()
-        }
-        detail.starImageUrl = result.starImageURL
-        detail.starIconUrl = result.starIconURL
-        self.navigationController?.pushViewController(detail, animated: true)
-=======
         Nuke.loadImage(with: starIconUrl, into: starIconImageView)
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
     }
 
     //写真を表示する

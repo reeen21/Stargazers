@@ -7,18 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
-<<<<<<< HEAD
-		4B65A3C128A9E63B00D710C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B65A3C028A9E63B00D710C6 /* Main.storyboard */; };
-		4B65A3C328A9E69600D710C6 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B65A3C228A9E69600D710C6 /* CellViewModel.swift */; };
-=======
-		4B24774728A229E300F7F646 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B24774628A229E300F7F646 /* CellViewModel.swift */; };
->>>>>>> cafcbf3 (SwiftUi移行に向けた準備)
-=======
 		3A32A48CDFECE92C1A22A46C /* Pods_constellation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A286E533E15F9CF4C4CDC608 /* Pods_constellation.framework */; };
 		4B65A3C328A9E69600D710C6 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B65A3C228A9E69600D710C6 /* CellViewModel.swift */; };
 		4B65A3C728A9F56600D710C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B65A3C628A9F56600D710C6 /* Main.storyboard */; };
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 		4B69A0F72875B4E500BBDF17 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A0F62875B4E500BBDF17 /* APICaller.swift */; };
 		4B69A0FC2875B68F00BBDF17 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A0FB2875B68F00BBDF17 /* Articles.swift */; };
 		4B69A0FE2875BC1100BBDF17 /* ConstellationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B69A0FD2875BC1100BBDF17 /* ConstellationCell.swift */; };
@@ -29,23 +20,11 @@
 		4BA4FF1A2874584A00A6F167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA4FF192874584A00A6F167 /* Assets.xcassets */; };
 		4BA4FF1D2874584A00A6F167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA4FF1B2874584A00A6F167 /* LaunchScreen.storyboard */; };
 		4BC2ECDA28758058005F3B0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2ECD928758058005F3B0B /* ViewController.swift */; };
-		4BEE37FB28A9D8A6004BE154 /* Constellation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEE37FA28A9D8A6004BE154 /* Constellation.swift */; };
-		4BEE37FD28A9D915004BE154 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEE37FC28A9D915004BE154 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
-<<<<<<< HEAD
-		4B65A3C028A9E63B00D710C6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		4B65A3C228A9E69600D710C6 /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
-=======
-		4B24774628A229E300F7F646 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
->>>>>>> cafcbf3 (SwiftUi移行に向けた準備)
-=======
-		0528BF00746AA8494436D3B3 /* Pods-constellation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-constellation.release.xcconfig"; path = "Target Support Files/Pods-constellation/Pods-constellation.release.xcconfig"; sourceTree = "<group>"; };
 		4B65A3C228A9E69600D710C6 /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		4B65A3C628A9F56600D710C6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 		4B69A0F62875B4E500BBDF17 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		4B69A0FB2875B68F00BBDF17 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		4B69A0FD2875BC1100BBDF17 /* ConstellationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstellationCell.swift; sourceTree = "<group>"; };
@@ -58,16 +37,9 @@
 		4BA4FF1C2874584A00A6F167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BA4FF1E2874584A00A6F167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BC2ECD928758058005F3B0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-		4BEE37FA28A9D8A6004BE154 /* Constellation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constellation.swift; sourceTree = "<group>"; };
-		4BEE37FC28A9D915004BE154 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
->>>>>>> cafcbf3 (SwiftUi移行に向けた準備)
-=======
+		5B99271F9B0F336CF9AEEBC6 /* Pods-constellation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-constellation.release.xcconfig"; path = "Target Support Files/Pods-constellation/Pods-constellation.release.xcconfig"; sourceTree = "<group>"; };
 		A286E533E15F9CF4C4CDC608 /* Pods_constellation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_constellation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD8B2F0D13D3BF0EAB5971B5 /* Pods-constellation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-constellation.debug.xcconfig"; path = "Target Support Files/Pods-constellation/Pods-constellation.debug.xcconfig"; sourceTree = "<group>"; };
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
+		B5213375A4E5FA47DB402F00 /* Pods-constellation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-constellation.debug.xcconfig"; path = "Target Support Files/Pods-constellation/Pods-constellation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-=======
 				3A32A48CDFECE92C1A22A46C /* Pods_constellation.framework in Frameworks */,
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,15 +60,6 @@
 				A286E533E15F9CF4C4CDC608 /* Pods_constellation.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		264723731CAD40FC2A6F60A8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BD8B2F0D13D3BF0EAB5971B5 /* Pods-constellation.debug.xcconfig */,
-				0528BF00746AA8494436D3B3 /* Pods-constellation.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		4B69A0F82875B65900BBDF17 /* ViewContoller */ = {
@@ -117,16 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				4BA4FF1B2874584A00A6F167 /* LaunchScreen.storyboard */,
-<<<<<<< HEAD
-<<<<<<< HEAD
-				4B65A3C028A9E63B00D710C6 /* Main.storyboard */,
-=======
-				4BEE37FA28A9D8A6004BE154 /* Constellation.swift */,
-				4BEE37FC28A9D915004BE154 /* ContentView.swift */,
->>>>>>> cafcbf3 (SwiftUi移行に向けた準備)
-=======
 				4B65A3C628A9F56600D710C6 /* Main.storyboard */,
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,11 +97,8 @@
 			children = (
 				4BA4FF0F2874584900A6F167 /* constellation */,
 				4BA4FF0E2874584900A6F167 /* Products */,
-<<<<<<< HEAD
-=======
-				264723731CAD40FC2A6F60A8 /* Pods */,
 				1B4F6860A33C06E27276FF88 /* Frameworks */,
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
+				4E5F24B3F7E1F6DA992D3D41 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +124,16 @@
 			path = constellation;
 			sourceTree = "<group>";
 		};
+		4E5F24B3F7E1F6DA992D3D41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5213375A4E5FA47DB402F00 /* Pods-constellation.debug.xcconfig */,
+				5B99271F9B0F336CF9AEEBC6 /* Pods-constellation.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,17 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BA4FF212874584A00A6F167 /* Build configuration list for PBXNativeTarget "constellation" */;
 			buildPhases = (
-<<<<<<< HEAD
-				4BA4FF092874584900A6F167 /* Sources */,
-				4BA4FF0A2874584900A6F167 /* Frameworks */,
-				4BA4FF0B2874584900A6F167 /* Resources */,
-=======
 				1D5CCB504675A9F1994A0871 /* [CP] Check Pods Manifest.lock */,
 				4BA4FF092874584900A6F167 /* Sources */,
 				4BA4FF0A2874584900A6F167 /* Frameworks */,
 				4BA4FF0B2874584900A6F167 /* Resources */,
 				55DC07173136C25C4B98F56B /* [CP] Embed Pods Frameworks */,
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 			);
 			buildRules = (
 			);
@@ -242,11 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-				4B65A3C128A9E63B00D710C6 /* Main.storyboard in Resources */,
-=======
 				4B65A3C728A9F56600D710C6 /* Main.storyboard in Resources */,
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 				4BA4FF1D2874584A00A6F167 /* LaunchScreen.storyboard in Resources */,
 				4BA4FF1A2874584A00A6F167 /* Assets.xcassets in Resources */,
 			);
@@ -254,8 +202,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-<<<<<<< HEAD
-=======
 /* Begin PBXShellScriptBuildPhase section */
 		1D5CCB504675A9F1994A0871 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -298,7 +244,6 @@
 		};
 /* End PBXShellScriptBuildPhase section */
 
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 /* Begin PBXSourcesBuildPhase section */
 		4BA4FF092874584900A6F167 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -306,15 +251,8 @@
 			files = (
 				4B65A3C328A9E69600D710C6 /* CellViewModel.swift in Sources */,
 				4BA4FF152874584900A6F167 /* DetailViewController.swift in Sources */,
-<<<<<<< HEAD
-				4BEE37FD28A9D915004BE154 /* ContentView.swift in Sources */,
 				4B69A0FC2875B68F00BBDF17 /* Articles.swift in Sources */,
 				4B69A0FE2875BC1100BBDF17 /* ConstellationCell.swift in Sources */,
-				4BEE37FB28A9D8A6004BE154 /* Constellation.swift in Sources */,
-=======
-				4B69A0FC2875B68F00BBDF17 /* Articles.swift in Sources */,
-				4B69A0FE2875BC1100BBDF17 /* ConstellationCell.swift in Sources */,
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 				4BA4FF112874584900A6F167 /* AppDelegate.swift in Sources */,
 				4BC2ECDA28758058005F3B0B /* ViewController.swift in Sources */,
 				4B69A1002875D0F200BBDF17 /* BigImageView.swift in Sources */,
@@ -453,42 +391,28 @@
 		};
 		4BA4FF222874584A00A6F167 /* Debug */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
-=======
-			baseConfigurationReference = BD8B2F0D13D3BF0EAB5971B5 /* Pods-constellation.debug.xcconfig */;
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
+			baseConfigurationReference = B5213375A4E5FA47DB402F00 /* Pods-constellation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y5DZ85S2CD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = constellation/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Stargazers ";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "星座情報の取得のために位置情報を使用します";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "星座情報の取得のために位置情報を使用します";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-=======
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
->>>>>>> cafcbf3 (SwiftUi移行に向けた準備)
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-<<<<<<< HEAD
-				MARKETING_VERSION = 1.4;
-=======
 				MARKETING_VERSION = 1.5;
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ren.constellation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -499,42 +423,28 @@
 		};
 		4BA4FF232874584A00A6F167 /* Release */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
-=======
-			baseConfigurationReference = 0528BF00746AA8494436D3B3 /* Pods-constellation.release.xcconfig */;
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
+			baseConfigurationReference = 5B99271F9B0F336CF9AEEBC6 /* Pods-constellation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y5DZ85S2CD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = constellation/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Stargazers ";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "星座情報の取得のために位置情報を使用します";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "星座情報の取得のために位置情報を使用します";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-=======
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
->>>>>>> cafcbf3 (SwiftUi移行に向けた準備)
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-<<<<<<< HEAD
-				MARKETING_VERSION = 1.4;
-=======
 				MARKETING_VERSION = 1.5;
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ren.constellation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

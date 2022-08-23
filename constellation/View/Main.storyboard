@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39Q-Ss-NQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3546" y="33"/>
+            <point key="canvasLocation" x="3539" y="33"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -179,28 +179,17 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nbV-Lh-IfL">
-<<<<<<< HEAD:constellation/View/Main.storyboard
-                                <rect key="frame" x="5" y="440" width="414" height="402"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1mS-jv-h8i">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="199"/>
-=======
                                 <rect key="frame" x="5" y="440" width="404" height="402"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1mS-jv-h8i">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="199"/>
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d:constellation/View/Base.lproj/Main.storyboard
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="origin" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qo-V0-MYB">
-<<<<<<< HEAD:constellation/View/Main.storyboard
-                                        <rect key="frame" x="0.0" y="203" width="414" height="199"/>
-=======
                                         <rect key="frame" x="0.0" y="203" width="404" height="199"/>
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d:constellation/View/Base.lproj/Main.storyboard
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -213,24 +202,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nbV-Lh-IfL" firstAttribute="top" secondItem="nqz-pe-7Jm" secondAttribute="bottom" constant="20" id="2XX-4t-Hfd"/>
-<<<<<<< HEAD:constellation/View/Main.storyboard
-                            <constraint firstItem="nqz-pe-7Jm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8q4-ZC-5oM"/>
-=======
                             <constraint firstAttribute="trailing" secondItem="nbV-Lh-IfL" secondAttribute="trailing" constant="5" id="7rf-qz-yHM"/>
                             <constraint firstItem="nqz-pe-7Jm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8q4-ZC-5oM"/>
                             <constraint firstItem="nbV-Lh-IfL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="9Su-cq-8GG"/>
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d:constellation/View/Base.lproj/Main.storyboard
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nbV-Lh-IfL" secondAttribute="bottom" constant="20" id="Pbc-Jf-6vo"/>
                             <constraint firstItem="9qi-ar-Raa" firstAttribute="top" secondItem="YX5-hY-fae" secondAttribute="bottom" constant="10" id="RYq-cr-Kmb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nqz-pe-7Jm" secondAttribute="trailing" id="RkN-3N-fj8"/>
                             <constraint firstItem="9qi-ar-Raa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WxS-Gz-kuI"/>
                             <constraint firstItem="YX5-hY-fae" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cqT-uC-2vS"/>
-                            <constraint firstItem="nbV-Lh-IfL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="5" id="gYC-Uu-QTb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YX5-hY-fae" secondAttribute="trailing" id="oOM-Ib-Ydb"/>
-<<<<<<< HEAD:constellation/View/Main.storyboard
-                            <constraint firstItem="nbV-Lh-IfL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="oZq-tv-k7B"/>
-=======
->>>>>>> 4a53e51ead91fab7dfe51d87df64f31f08b9597d:constellation/View/Base.lproj/Main.storyboard
                             <constraint firstItem="nqz-pe-7Jm" firstAttribute="top" secondItem="9qi-ar-Raa" secondAttribute="bottom" constant="10" id="ucD-PC-41t"/>
                             <constraint firstItem="YX5-hY-fae" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="vQh-es-uPT"/>
                         </constraints>
@@ -315,7 +295,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evH-Zp-k8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2857" y="33"/>
+            <point key="canvasLocation" x="2667" y="33"/>
         </scene>
     </scenes>
     <resources>

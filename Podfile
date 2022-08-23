@@ -6,6 +6,6 @@ target 'constellation' do
   use_frameworks!
 
   # Pods for constellation
-pod 'Nuke'
+  pod "Nuke" 
 
 end
