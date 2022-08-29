@@ -113,9 +113,11 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         starImageView.layer.borderColor = UIColor.lightGray.cgColor
         Nuke.loadImage(with: starImageUrl, into: starImageView)
         
-       
+        let starIconURL = result.starIconURL
+        starIconImageView.layer.borderWidth = 0.3
+        starIconImageView.layer.borderColor = UIColor.lightGray.cgColor
+        Nuke.loadImage(with: starIconURL, into: starIconImageView)
         
-
     }
 
     //写真を表示する
