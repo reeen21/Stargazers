@@ -13,16 +13,12 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet var tableView: UITableView!
     private var result = [Results]()
+    let api = APICaller()
     private var cellModel = [CellViewModel]()
     let locationManager = CLLocationManager()
     let decoder = JSONDecoder()
 
-    var MonthAndDay = ""
-    var hour = ""
-    var min = ""
-
     override func viewDidLoad() {
-        date()
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -45,25 +41,13 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
             locationManager.startUpdatingHeading()
         }
     }
-
-    //時刻を取得し、APIに情報を渡す
-    func date() {
-        let now = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd  HH mm"
-        let dateStr = formatter.string(from: now as Date)
-        let date = dateStr.components(separatedBy: " ")
-        MonthAndDay = date[0]
-        hour = date[1]
-        min = date[2]
-    }
-
+   
     //位置情報を取得
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         let lat = Double(location.coordinate.latitude)
         let lon = Double(location.coordinate.longitude)
-        APICaller.shared.getInfo(lat: lat, lon: lon, MonthAndDay: MonthAndDay, hour: hour, min: min) { [weak self] result in
+        APICaller.shared.getInfo(lat: lat, lon: lon) { [weak self] result in
             switch result {
             case .success(let articles):
                 self?.result = articles
