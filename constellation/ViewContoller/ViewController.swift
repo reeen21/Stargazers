@@ -13,10 +13,8 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet var tableView: UITableView!
     private var result = [Results]()
-    let api = APICaller()
     private var cellModel = [CellViewModel]()
     let locationManager = CLLocationManager()
-    let decoder = JSONDecoder()
 
     override func viewDidLoad() {
         tableView.delegate = self

@@ -14,7 +14,6 @@ class APICaller {
         let dt = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH mm"
-        
         let date = dateFormatter.string(from: dt)
         let separate = date.components(separatedBy: " ")
         let MonthAndDay = separate[0]
@@ -23,9 +22,7 @@ class APICaller {
 
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        //https://livlog.xyz/hoshimiru/constellation?lat=35.862&lng=139.645&date=2013-10-31&hour=0&min=0
         let url = "https://livlog.xyz/hoshimiru/constellation?lat=\(lat)&lng=\(lon)&date=\(MonthAndDay)&hour=\(hour)&min=\(min)"
-        print(url)
         guard let urlString = URL(string: url) else {return}
         URLSession.shared.dataTask(with: urlString) { data, _, error in
             if let error = error {
