@@ -10,7 +10,7 @@ import Foundation
 class APICaller {
     static let shared = APICaller()
     
-    func getInfo(lat: Double, lon: Double, completion: @escaping (Result<[Results], Error>) -> Void) {
+    func getInfo(latitude: Double, longitude: Double, completion: @escaping (Result<[Results], Error>) -> Void) {
         let dt = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH mm"
@@ -22,7 +22,7 @@ class APICaller {
 
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let url = "https://livlog.xyz/hoshimiru/constellation?lat=\(lat)&lng=\(lon)&date=\(MonthAndDay)&hour=\(hour)&min=\(min)"
+        let url = "https://livlog.xyz/hoshimiru/constellation?lat=\(latitude)&lng=\(longitude)&date=\(MonthAndDay)&hour=\(hour)&min=\(min)"
         guard let urlString = URL(string: url) else {return}
         URLSession.shared.dataTask(with: urlString) { data, _, error in
             if let error = error {

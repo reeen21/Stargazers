@@ -43,9 +43,9 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
     //位置情報を取得
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
-        let lat = Double(location.coordinate.latitude)
-        let lon = Double(location.coordinate.longitude)
-        APICaller.shared.getInfo(lat: lat, lon: lon) { [weak self] result in
+        let latitude = Double(location.coordinate.latitude)
+        let longitude = Double(location.coordinate.longitude)
+        APICaller.shared.getInfo(latitude: latitude, longitude: longitude) { [weak self] result in
             switch result {
             case .success(let articles):
                 self?.result = articles
