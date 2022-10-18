@@ -4,7 +4,6 @@
 //
 //  Created by 高橋蓮 on 2022/07/06.
 //
-
 import CoreLocation
 import UIKit
 import Nuke
@@ -13,7 +12,7 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet var tableView: UITableView!
     private var result = [Results]()
-    private var cellModel = [CellViewModel]()
+    private var cellModel = [CellModel]()
     let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
@@ -50,7 +49,7 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
             case .success(let articles):
                 self?.result = articles
                 self?.cellModel = articles.compactMap({
-                    CellViewModel(
+                    CellModel(
                         jpName: $0.jpName,
                         enName: $0.enName,
                         direction: $0.direction,
