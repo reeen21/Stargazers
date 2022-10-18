@@ -49,10 +49,10 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
     
     //現在の端末の上部が指す方向（角度）を返す
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        guard let result = results else {return}
+        guard let results else {return}
         let text = "".appendingFormat("%.0f", newHeading.magneticHeading)
         self.nowDirection.text = "端末の向き: \(text)°"
-        let formattedNumLabel = "".appendingFormat("%.0f", result.directionNum)
+        let formattedNumLabel = "".appendingFormat("%.0f", results.directionNum)
         if text == formattedNumLabel {
             hapticFeedback.notificationOccurred(.success)
         }
@@ -60,25 +60,25 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
     
     //各テキストにデータを入れる　fontやsizeを設定
     private func setData() {
-        guard let result = results else {return}
-        altitudeNumLabel.text = "高度: \(result.altitudeNum)°"
-        altitudeLabel.text = "高度: \(result.altitude)"
-        let formattedNumLabel = "".appendingFormat("%.0f", result.directionNum)
+        guard let results else {return}
+        altitudeNumLabel.text = "高度: \(results.altitudeNum)°"
+        altitudeLabel.text = "高度: \(results.altitude)"
+        let formattedNumLabel = "".appendingFormat("%.0f", results.directionNum)
         directionNumLabel.text = "星座の方角: \(formattedNumLabel)°"
-        directionLabel.text = "星座の方角: \(result.direction)"
-        seasonLabel.text = "季節: \(result.season)"
-        jpNameLabel.text = "\(result.jpName) / \(result.enName)"
+        directionLabel.text = "星座の方角: \(results.direction)"
+        seasonLabel.text = "季節: \(results.season)"
+        jpNameLabel.text = "\(results.jpName) / \(results.enName)"
         
-        if result.origin == "なし" {
+        if results.origin == "なし" {
             originLabel.text = "データがありません"
         } else {
-            originLabel.text = "起源: \(result.origin)"
+            originLabel.text = "起源: \(results.origin)"
         }
         
-        if result.content == "なし" {
+        if results.content == "なし" {
             contentLabel.text = "データがありません"
         } else {
-            contentLabel.text = "概説: \(result.content)"
+            contentLabel.text = "概説: \(results.content)"
         }
         setTextStyle()
         setImages()
@@ -127,12 +127,12 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
     
     //写真を表示する
     @objc func DetailImage(_ sender: UIBarButtonItem) {
-        guard let result = results else {return}
+        guard let results else {return}
         guard let detail = self.storyboard?.instantiateViewController(withIdentifier: "Big") as? BigImageView else {
             fatalError()
         }
-        detail.starImageUrl = result.starImageURL
-        detail.starIconUrl = result.starIconURL
+        detail.starImageUrl = results.starImageURL
+        detail.starIconUrl = results.starIconURL
         self.navigationController?.pushViewController(detail, animated: true)
     }
 }
