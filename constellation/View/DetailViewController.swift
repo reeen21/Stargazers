@@ -3,11 +3,14 @@
 //  constellation
 //
 //  Created by 高橋蓮 on 2022/07/05.
-//
+//private をつけるべき
+//finalをつけるべき
+
 
 import UIKit
 import CoreLocation
 import Nuke
+import AudioToolbox
 
 class DetailViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -24,7 +27,6 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var contentLabel: UITextView!
     
     let locationManager = CLLocationManager()
-    let hapticFeedback = UINotificationFeedbackGenerator()
     var results: Results!
     private var bigImageButton: UIBarButtonItem!
     
@@ -47,6 +49,7 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingHeading()
     }
     
+    
     //現在の端末の上部が指す方向（角度）を返す
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         guard let results else {return}
@@ -54,8 +57,9 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         self.nowDirection.text = "端末の向き: \(text)°"
         let formattedNumLabel = "".appendingFormat("%.0f", results.directionNum)
         if text == formattedNumLabel {
-            hapticFeedback.notificationOccurred(.success)
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
         }
+        
     }
     
     //各テキストにデータを入れる　fontやsizeを設定

@@ -14,6 +14,7 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
     private var result = [Results]()
     private var cellModel = [CellModel]()
     let locationManager = CLLocationManager()
+    let viewModel = ViewModel()
     
     override func viewDidLoad() {
         locationManager.delegate = self
@@ -38,31 +39,22 @@ class ViewControllor: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingHeading()
     }
     
+    
     //位置情報を取得
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         let latitude = Double(location.coordinate.latitude)
         let longitude = Double(location.coordinate.longitude)
-        APICaller.shared.getInfo(latitude: latitude, longitude: longitude) { [weak self] result in
-            switch result {
-            case .success(let articles):
-                self?.result = articles
-                self?.cellModel = articles.compactMap({
-                    CellModel(
-                        jpName: $0.jpName,
-                        enName: $0.enName,
-                        direction: $0.direction,
-                        starIconURL: $0.starIconURL)
-                })
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }
-            case .failure(let err):
-                print("検索時にerrorが発生しました:\(err)")
+        viewModel.apiCaller(lati: latitude, log: longitude) { (result, cellModel) in
+            self.result = result
+            self.cellModel = cellModel
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
     }
 }
+
 
 //MARK: - Extensions
 extension ViewControllor: UITableViewDelegate, UITableViewDataSource {
