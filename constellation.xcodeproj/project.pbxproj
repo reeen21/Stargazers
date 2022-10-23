@@ -102,7 +102,7 @@
 			children = (
 				4B69A0FA2875B66800BBDF17 /* Model */,
 				4B69A0F92875B66300BBDF17 /* View */,
-				4BB607002904FA3B0013BF66 /* ViewModel */,
+				4BB6070429050D700013BF66 /* ViewModel */,
 				4BA4FF102874584900A6F167 /* AppDelegate.swift */,
 				4BA4FF122874584900A6F167 /* SceneDelegate.swift */,
 				4BA4FF192874584A00A6F167 /* Assets.xcassets */,
@@ -111,13 +111,12 @@
 			path = constellation;
 			sourceTree = "<group>";
 		};
-		4BB607002904FA3B0013BF66 /* ViewModel */ = {
+		4BB6070429050D700013BF66 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				4BB607022904FA5C0013BF66 /* ViewModel.swift */,
 			);
-			name = ViewModel;
-			path = Model/ViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		79F24E0FB6BD8F163E4B6BFA /* Pods */ = {
