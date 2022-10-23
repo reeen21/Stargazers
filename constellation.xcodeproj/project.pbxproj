@@ -117,7 +117,7 @@
 				4BB607022904FA5C0013BF66 /* ViewModel.swift */,
 			);
 			name = ViewModel;
-			path = View/ViewModel;
+			path = Model/ViewModel;
 			sourceTree = "<group>";
 		};
 		79F24E0FB6BD8F163E4B6BFA /* Pods */ = {
