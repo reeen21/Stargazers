@@ -9,7 +9,6 @@ import Foundation
 import CoreLocation
 
 class ViewModel {
-    
     private var result = [Results]()
     private var cellModel = [CellModel]()
 
@@ -30,8 +29,6 @@ class ViewModel {
             case .failure(let err):
                 print("検索時にerrorが発生しました:\(err)")
             }
-            
         }
-
     }
 }
