@@ -3,8 +3,7 @@
 //  constellation
 //
 //  Created by 高橋蓮 on 2022/07/05.
-//private をつけるべき
-//finalをつけるべき
+
 
 
 import UIKit
@@ -12,21 +11,21 @@ import CoreLocation
 import Nuke
 import AudioToolbox
 
-class DetailViewController: UIViewController, CLLocationManagerDelegate {
+final class DetailViewController: UIViewController, CLLocationManagerDelegate {
     
-    @IBOutlet var starImageView: UIImageView!
-    @IBOutlet var starIconImageView: UIImageView!
-    @IBOutlet var altitudeNumLabel: UILabel!
-    @IBOutlet var directionLabel: UILabel!
-    @IBOutlet var directionNumLabel: UILabel!
-    @IBOutlet var seasonLabel: UILabel!
-    @IBOutlet var nowDirection: UILabel!
-    @IBOutlet var altitudeLabel: UILabel!
-    @IBOutlet var jpNameLabel: UILabel!
-    @IBOutlet var originLabel: UITextView!
-    @IBOutlet var contentLabel: UITextView!
+    @IBOutlet private var starImageView: UIImageView!
+    @IBOutlet private var starIconImageView: UIImageView!
+    @IBOutlet private var altitudeNumLabel: UILabel!
+    @IBOutlet private var directionLabel: UILabel!
+    @IBOutlet private var directionNumLabel: UILabel!
+    @IBOutlet private var seasonLabel: UILabel!
+    @IBOutlet private var nowDirection: UILabel!
+    @IBOutlet private var altitudeLabel: UILabel!
+    @IBOutlet private var jpNameLabel: UILabel!
+    @IBOutlet private var originLabel: UITextView!
+    @IBOutlet private var contentLabel: UITextView!
     
-    let locationManager = CLLocationManager()
+    private let locationManager = CLLocationManager()
     var results: Results!
     private var bigImageButton: UIBarButtonItem!
     

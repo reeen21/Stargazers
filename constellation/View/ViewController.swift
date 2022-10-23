@@ -8,13 +8,13 @@ import CoreLocation
 import UIKit
 import Nuke
 
-class ViewControllor: UIViewController, CLLocationManagerDelegate {
+final class ViewControllor: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var tableView: UITableView!
     private var result = [Results]()
     private var cellModel = [CellModel]()
-    let locationManager = CLLocationManager()
-    let viewModel = ViewModel()
+    private let locationManager = CLLocationManager()
+    private let viewModel = ViewModel()
     
     override func viewDidLoad() {
         locationManager.delegate = self

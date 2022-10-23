@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CoreLocation
 
 class ViewModel {
     private var result = [Results]()
