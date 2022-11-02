@@ -10,8 +10,8 @@ import Nuke
 
 final class BigImageView: UIViewController {
 
-    @IBOutlet private var starImage: UIImageView!
-    @IBOutlet private var starIcon: UIImageView!
+    @IBOutlet private weak var starImage: UIImageView!
+    @IBOutlet private weak var starIcon: UIImageView!
 
     var starImageUrl: URL? = nil
     var starIconUrl: URL? = nil

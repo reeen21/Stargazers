@@ -10,9 +10,9 @@ import Nuke
 
 class ConstellationCell: UITableViewCell {
     
-    @IBOutlet var constellationName: UILabel!
-    @IBOutlet var directionLabel: UILabel!
-    @IBOutlet var starIcon: UIImageView!
+    @IBOutlet weak var constellationName: UILabel!
+    @IBOutlet weak var directionLabel: UILabel!
+    @IBOutlet weak var starIcon: UIImageView!
 
     func configure(with cellModel: CellModel) {
         constellationName.text = "\(cellModel.jpName) / \(cellModel.enName)"

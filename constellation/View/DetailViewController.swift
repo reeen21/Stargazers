@@ -13,17 +13,17 @@ import AudioToolbox
 
 final class DetailViewController: UIViewController, CLLocationManagerDelegate {
     
-    @IBOutlet private var starImageView: UIImageView!
-    @IBOutlet private var starIconImageView: UIImageView!
-    @IBOutlet private var altitudeNumLabel: UILabel!
-    @IBOutlet private var directionLabel: UILabel!
-    @IBOutlet private var directionNumLabel: UILabel!
-    @IBOutlet private var seasonLabel: UILabel!
-    @IBOutlet private var nowDirection: UILabel!
-    @IBOutlet private var altitudeLabel: UILabel!
-    @IBOutlet private var jpNameLabel: UILabel!
-    @IBOutlet private var originLabel: UITextView!
-    @IBOutlet private var contentLabel: UITextView!
+    @IBOutlet private weak var starImageView: UIImageView!
+    @IBOutlet private weak var starIconImageView: UIImageView!
+    @IBOutlet private weak var altitudeNumLabel: UILabel!
+    @IBOutlet private weak var directionLabel: UILabel!
+    @IBOutlet private weak var directionNumLabel: UILabel!
+    @IBOutlet private weak var seasonLabel: UILabel!
+    @IBOutlet private weak var nowDirection: UILabel!
+    @IBOutlet private weak var altitudeLabel: UILabel!
+    @IBOutlet private weak var jpNameLabel: UILabel!
+    @IBOutlet private weak var originLabel: UITextView!
+    @IBOutlet private weak var contentLabel: UITextView!
     
     private let locationManager = CLLocationManager()
     var results: Results!
