@@ -11,8 +11,8 @@ class ViewModel {
     private var result = [Results]()
     private var cellModel = [CellModel]()
 
-    func apiCaller(lati: Double, log: Double, completion: @escaping ([Results], [CellModel]) -> Void) {
-        APICaller.shared.getInfo(latitude: lati, longitude: log) { [weak self] result in
+    func apiCaller(latitude: Double, longitude: Double, completion: @escaping ([Results], [CellModel]) -> Void) {
+        APICaller.shared.getInfo(latitude: latitude, longitude: longitude) { [weak self] result in
             switch result {
             case .success(let articles):
                 self?.result = articles

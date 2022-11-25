@@ -45,7 +45,7 @@ final class ViewControllor: UIViewController, CLLocationManagerDelegate {
         let location = locations[0]
         let latitude = Double(location.coordinate.latitude)
         let longitude = Double(location.coordinate.longitude)
-        viewModel.apiCaller(lati: latitude, log: longitude) { (result, cellModel) in
+        viewModel.apiCaller(latitude: latitude, longitude: longitude) { (result, cellModel) in
             self.result = result
             self.cellModel = cellModel
             DispatchQueue.main.async {
